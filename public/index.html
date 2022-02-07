@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.IO Chat Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div>
+  <input id="input" type="text" placeholder="mensagem">
+  <button onclick="enviarMensagem()">enviar</button>
+  </div>
+
+  <div>
+    <label for="sprite">Escolha seu personagem:</label>
+    <select id="sprite">
+      <option value="" selected></option>
+      <option value="25">Pikachu</option>
+      <option value="59">Arcanine</option>
+      <option value="1">Bulbasauro</option>
+    </select>
+    <button onclick="escolherSprite()">Escolher</button>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <div>
+    <span>Jogadores Conectados: </span>
+    <ul id="lista"></ul>
+  </div> 
+
+  <fieldset id="mensagens">
+    <legend>Chat</legend>
+  </fieldset>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>    
+</body>
+</html>
